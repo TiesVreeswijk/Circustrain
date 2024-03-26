@@ -112,25 +112,18 @@ namespace WindowsFormsApp1
         {
             foreach (Wagon wagon in wagons)
             {
-                while (largeHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Large <= Capacity)
+                if(wagon.ContainsAnimalOfSizeAndDiet(wagon.animals, AnimalSize.Middle, DietType.Carnivore))
                 {
-                    Animal herbivore = largeHerbivores.FirstOrDefault();
-                    wagon.AddAnimal(herbivore);
-                    largeHerbivores.Remove(herbivore);
-                }
-                while (mediumHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Middle <= Capacity)
-                {
-                    Animal herbivore = mediumHerbivores.FirstOrDefault();
-                    wagon.AddAnimal(herbivore);
-                    mediumHerbivores.Remove(herbivore);
-                }
-                while (smallHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Small <= Capacity)
-                {
-                    Animal herbivore = smallHerbivores.FirstOrDefault();
-                    wagon.AddAnimal(herbivore);
-                    smallHerbivores.Remove(herbivore);
+                    while (smallHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Small <= Capacity)
+                    {
+                        Animal smallHerbivore = smallHerbivores.FirstOrDefault();
+                        wagon.AddAnimal(smallHerbivore);
+                        smallHerbivores.Remove(smallHerbivore);
+                    }
                 }
             }
+
+            
         }
     }
 }
