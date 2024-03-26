@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     {
 
         public int Capacity { get; private set; } = 10;
-        List<Wagon> wagons = new List<Wagon>();
+        public List<Wagon> wagons = new List<Wagon>();
 
         public List<Wagon> DistributeAnimals(List<Animal> animals)
         {
@@ -25,7 +25,6 @@ namespace WindowsFormsApp1
             List<Animal> largeCarnivores = carnivores.Where(animal => animal.Size == AnimalSize.Large).ToList();
             List<Animal> middleCarnivores = carnivores.Where(animal => animal.Size == AnimalSize.Middle).ToList();
             List<Animal> smallCarnivores = carnivores.Where(animal => animal.Size == AnimalSize.Small).ToList();
-
 
 
             AddCarnivores(carnivores);
@@ -110,20 +109,33 @@ namespace WindowsFormsApp1
 
         public void FillRemainingHerbivores(List<Animal> smallHerbivores, List<Animal> mediumHerbivores, List<Animal> largeHerbivores)
         {
-            foreach (Wagon wagon in wagons)
+            Wagon wagon = new Wagon();
+            while (smallHerbivores.Count > 0 && mediumHerbivores.Count > 0 && largeHerbivores.Count > 0)
             {
-                if(wagon.ContainsAnimalOfSizeAndDiet(wagon.animals, AnimalSize.Middle, DietType.Carnivore))
+                while (largeHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Large <= Capacity)
                 {
-                    while (smallHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Small <= Capacity)
-                    {
-                        Animal smallHerbivore = smallHerbivores.FirstOrDefault();
-                        wagon.AddAnimal(smallHerbivore);
-                        smallHerbivores.Remove(smallHerbivore);
-                    }
+                    Animal largeHerbivore = largeHerbivores.FirstOrDefault();
+                    wagon.AddAnimal(largeHerbivore);
+                    largeHerbivores.Remove(largeHerbivore);
                 }
-            }
-
+                while (mediumHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Middle <= Capacity)
+                {
+                    Animal mediumHerbivore = mediumHerbivores.FirstOrDefault();
+                    wagon.AddAnimal(mediumHerbivore);
+                    mediumHerbivores.Remove(mediumHerbivore);
+                }
+                while (smallHerbivores.Any() && (int)wagon.GetCurrentSize() + (int)AnimalSize.Small <= Capacity)
+                {
+                    Animal smallHerbivore = smallHerbivores.FirstOrDefault();
+                    wagon.AddAnimal(smallHerbivore);
+                    smallHerbivores.Remove(smallHerbivore);
+                }
+                wagons.Add(wagon);
+                wagon = new Wagon();
+            } 
             
+                
+
         }
     }
 }
