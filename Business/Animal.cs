@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    public abstract class Animal
+    public class Animal
     {
         public AnimalSize Size { get; set; }
         public DietType Diet { get; set; }

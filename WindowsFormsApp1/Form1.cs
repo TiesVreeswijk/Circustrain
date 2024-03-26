@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static WindowsFormsApp1.Animal;
 
 namespace WindowsFormsApp1
 {
@@ -22,45 +23,45 @@ namespace WindowsFormsApp1
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallCarnCount = (int)NumUpDownSmallCarnivore.Value;
-            int mediumCarnCount = (int)NumUpDownMediumCarnivore.Value;
-            int largeCarnCount = (int)NumUpDownLargeCarnivore.Value;
+            int smallCarnivoreCount = (int)NumUpDownSmallCarnivore.Value;
+            int mediumCarnivoreCount = (int)NumUpDownMediumCarnivore.Value;
+            int largeCarnivoreCount = (int)NumUpDownLargeCarnivore.Value;
 
-            int smallHerbCount = (int)NumUpDownSmallHerbivore.Value;
-            int mediumHerbCount = (int)NumUpDownMediumHerbivore.Value;
-            int largeHerbCount = (int)NumUpDownLargeHerbivore.Value;
+            int smallHerbivoreCount = (int)NumUpDownSmallHerbivore.Value;
+            int mediumHerbivoreCount = (int)NumUpDownMediumHerbivore.Value;
+            int largeHerbivoreCount = (int)NumUpDownLargeHerbivore.Value;
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
             Dealer dealer = new Dealer();
-            List<Carriage> carriages = dealer.DistributeAnimals(animals);
+            dealer.DistributeAnimals(animals);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
     using System.Threading.Tasks;
     using WindowsFormsApp1;
+using static WindowsFormsApp1.Animal;
 
 
 namespace dealer.Test
@@ -17,48 +18,48 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount = 3;
-            int largeHerbCount = 2;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount = 3;
+            int largeHerbivoreCount = 2;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
 
         [TestMethod]
@@ -66,48 +67,48 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 5;
-            int mediumHerbCount = 2;
-            int largeHerbCount = 1;
+            int smallHerbivoreCount = 5;
+            int mediumHerbivoreCount = 2;
+            int largeHerbivoreCount = 1;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
 
         [TestMethod]
@@ -115,48 +116,48 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 1;
-            int mediumHerbCount = 1;
-            int largeHerbCount = 1;
+            int smallHerbivoreCount = 1;
+            int mediumHerbivoreCount = 1;
+            int largeHerbivoreCount = 1;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 1;
-            int largeCarnCount = 1;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 1;
+            int largeCarnivoreCount = 1;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 4);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 4);
         }
 
         [TestMethod]
@@ -164,48 +165,48 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 1;
-            int mediumHerbCount = 5;
-            int largeHerbCount = 1;
+            int smallHerbivoreCount = 1;
+            int mediumHerbivoreCount = 5;
+            int largeHerbivoreCount = 1;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 1;
-            int largeCarnCount = 2;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 1;
+            int largeCarnivoreCount = 2;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 5);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 5);
         }
 
         [TestMethod]
@@ -213,48 +214,48 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 1;
-            int mediumHerbCount = 1;
-            int largeHerbCount = 2;
+            int smallHerbivoreCount = 1;
+            int mediumHerbivoreCount = 1;
+            int largeHerbivoreCount = 2;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
 
         [TestMethod]
@@ -262,48 +263,48 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount = 2;
-            int largeHerbCount = 3;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount = 2;
+            int largeHerbivoreCount = 3;
 
-            int smallCarnCount = 3;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 3;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 3);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 3);
         }
 
         [TestMethod]
@@ -311,384 +312,384 @@ namespace dealer.Test
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount= 5;
-            int largeHerbCount = 6;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount= 5;
+            int largeHerbivoreCount = 6;
 
-            int smallCarnCount = 7;
-            int mediumCarnCount= 3;
-            int largeCarnCount = 3;
+            int smallCarnivoreCount = 7;
+            int mediumCarnivoreCount= 3;
+            int largeCarnivoreCount = 3;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 13);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 13);
         }
         [TestMethod]
         public void TestMethod8()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 5;
-            int mediumHerbCount = 3;
-            int largeHerbCount = 1;
+            int smallHerbivoreCount = 5;
+            int mediumHerbivoreCount = 3;
+            int largeHerbivoreCount = 1;
 
-            int smallCarnCount = 0;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 0;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
         public void TestMethod9()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount = 0;
-            int largeHerbCount = 3;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount = 0;
+            int largeHerbivoreCount = 3;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 3;
-            int largeCarnCount = 2;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 3;
+            int largeCarnivoreCount = 2;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 6);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 6);
         }
         [TestMethod]
         public void TestMethod10()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 5;
-            int mediumHerbCount = 5;
-            int largeHerbCount = 5;
+            int smallHerbivoreCount = 5;
+            int mediumHerbivoreCount = 5;
+            int largeHerbivoreCount = 5;
 
-            int smallCarnCount = 2;
-            int mediumCarnCount = 2;
-            int largeCarnCount = 2;
+            int smallCarnivoreCount = 2;
+            int mediumCarnivoreCount = 2;
+            int largeCarnivoreCount = 2;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 8);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 8);
         }
         [TestMethod]
         public void TestMethod11()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 1;
-            int mediumHerbCount = 3;
-            int largeHerbCount = 2;
+            int smallHerbivoreCount = 1;
+            int mediumHerbivoreCount = 3;
+            int largeHerbivoreCount = 2;
 
-            int smallCarnCount = 0;
-            int mediumCarnCount =0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 0;
+            int mediumCarnivoreCount =0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
         public void TestMethod12()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount = 3;
-            int largeHerbCount = 2;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount = 3;
+            int largeHerbivoreCount = 2;
 
-            int smallCarnCount = 1;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 1;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
         public void TestMethod13()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount = 2;
-            int largeHerbCount = 2;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount = 2;
+            int largeHerbivoreCount = 2;
 
-            int smallCarnCount = 2;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 2;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 2);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
         public void TestMethod14()
         {
             List<Animal> animals = new List<Animal>();
 
-            int smallHerbCount = 0;
-            int mediumHerbCount = 6;
-            int largeHerbCount = 2;
+            int smallHerbivoreCount = 0;
+            int mediumHerbivoreCount = 6;
+            int largeHerbivoreCount = 2;
 
-            int smallCarnCount = 2;
-            int mediumCarnCount = 0;
-            int largeCarnCount = 0;
+            int smallCarnivoreCount = 2;
+            int mediumCarnivoreCount = 0;
+            int largeCarnivoreCount = 0;
 
 
-            for (int i = 0; i < smallHerbCount; i++)
+            for (int i = 0; i < smallCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Carnivore));
             }
 
-            for (int i = 0; i < mediumHerbCount; i++)
+            for (int i = 0; i < mediumCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Carnivore));
             }
 
-            for (int i = 0; i < largeHerbCount; i++)
+            for (int i = 0; i < largeCarnivoreCount; i++)
             {
-                animals.Add(new Herbivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Carnivore));
             }
 
-            for (int i = 0; i < smallCarnCount; i++)
+            for (int i = 0; i < smallHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(1));
+                animals.Add(new Animal(AnimalSize.Small, DietType.Herbivore));
             }
 
-            for (int i = 0; i < mediumCarnCount; i++)
+            for (int i = 0; i < mediumHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(3));
+                animals.Add(new Animal(AnimalSize.Middle, DietType.Herbivore));
             }
 
-            for (int i = 0; i < largeCarnCount; i++)
+            for (int i = 0; i < largeHerbivoreCount; i++)
             {
-                animals.Add(new Carnivore(5));
+                animals.Add(new Animal(AnimalSize.Large, DietType.Herbivore));
             }
 
             Dealer Dealer = new Dealer();
-            List<Carriage> trainCarriages = Dealer.DistributeAnimals(animals);
-            Assert.IsTrue(trainCarriages.Count == 3);
+            List<Wagon> trainWagons = Dealer.DistributeAnimals(animals);
+            Assert.IsTrue(trainWagons.Count == 3);
         }
     }
 }
