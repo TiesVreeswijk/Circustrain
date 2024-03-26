@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public List<Carriage> DistributeAnimals(List<Animal> animals)
         {
             List<Carriage> carriages = new List<Carriage>();
-            
+
             AddCarnivores(animals, carriages);
             AddMediumHerbivores(animals, carriages);
             FillCarriageWithHerbivores(animals, carriages);

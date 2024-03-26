@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circustrein", "Circustrein.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dealer.Test", "..\Dealer.Test\dealer.Test.csproj", "{9468DA92-7D31-42BF-8871-340CBD9253DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "..\Business\Business.csproj", "{70237B96-CC58-4823-9264-586D41F5BB65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9468DA92-7D31-42BF-8871-340CBD9253DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9468DA92-7D31-42BF-8871-340CBD9253DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9468DA92-7D31-42BF-8871-340CBD9253DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70237B96-CC58-4823-9264-586D41F5BB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70237B96-CC58-4823-9264-586D41F5BB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70237B96-CC58-4823-9264-586D41F5BB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70237B96-CC58-4823-9264-586D41F5BB65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

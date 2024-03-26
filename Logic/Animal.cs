@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     public class Animal
     {
-        public int Size { get; set;}
+        public int Size { get; set; }
         public Animal(int size)
         {
             Size = size;

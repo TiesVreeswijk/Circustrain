@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WindowsFormsApp1\Circustrein.csproj">
-      <Project>{9dad7635-1e54-4489-94cd-8e11bf0cd7ad}</Project>
-      <Name>Circustrein</Name>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{70237b96-cc58-4823-9264-586d41f5bb65}</Project>
+      <Name>Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
