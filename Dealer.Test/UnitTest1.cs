@@ -14,7 +14,7 @@ namespace dealer.Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DistributeAnimals_Scenario1_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -63,7 +63,7 @@ namespace dealer.Test
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void DistributeAnimals_Scenario2_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -112,7 +112,7 @@ namespace dealer.Test
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void DistributeAnimals_Scenario3_WagonCount4()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -161,7 +161,7 @@ namespace dealer.Test
         }
 
         [TestMethod]
-        public void TestMethod4()
+        public void DistributeAnimals_Scenario4_WagonCount5()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -210,7 +210,7 @@ namespace dealer.Test
         }
 
         [TestMethod]
-        public void TestMethod5()
+        public void DistributeAnimals_Scenario5_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -259,7 +259,7 @@ namespace dealer.Test
         }
 
         [TestMethod]
-        public void TestMethod6()
+        public void DistributeAnimals_Scenario6_WagonCount3()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -308,7 +308,7 @@ namespace dealer.Test
         }
 
         [TestMethod]
-        public void TestMethod7()
+        public void DistributeAnimals_Scenario7_WagonCount13()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -356,7 +356,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 13);
         }
         [TestMethod]
-        public void TestMethod8()
+        public void DistributeAnimals_Scenario8_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -404,7 +404,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
-        public void TestMethod9()
+        public void DistributeAnimals_Scenario9_WagonCount6()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -452,7 +452,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 6);
         }
         [TestMethod]
-        public void TestMethod10()
+        public void DistributeAnimals_Scenario10_WagonCount8()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -500,7 +500,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 8);
         }
         [TestMethod]
-        public void TestMethod11()
+        public void DistributeAnimals_Scenario11_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -548,7 +548,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
-        public void TestMethod12()
+        public void DistributeAnimals_Scenario12_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -596,7 +596,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
-        public void TestMethod13()
+        public void DistributeAnimals_Scenario13_WagonCount2()
         {
             List<Animal> animals = new List<Animal>();
 
@@ -644,7 +644,7 @@ namespace dealer.Test
             Assert.IsTrue(trainWagons.Count == 2);
         }
         [TestMethod]
-        public void TestMethod14()
+        public void DistributeAnimals_Scenario14_WagonCount3()
         {
             List<Animal> animals = new List<Animal>();
 
