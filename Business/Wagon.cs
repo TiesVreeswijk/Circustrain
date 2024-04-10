@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
 {
     public class Wagon
     {
+        private int maxCapacity = 10;
         public List<Animal> animals = new List<Animal>();
 
         private int GetAnimalPoints(Animal animal)
@@ -29,7 +30,22 @@ namespace WindowsFormsApp1
 
         public void AddAnimal(Animal animal)
         {
-            animals.Add(animal);
+            bool canAddAnimal = true;
+            if ((int)animal.Size + CalculateWagonSize() <= maxCapacity)
+            {
+                foreach (Animal animalInWagon in animals)
+                {
+
+                    if (animalInWagon.Diet == DietType.Carnivore && animal.Diet == DietType.Herbivore && animal.Size <= animalInWagon.Size)
+                    {
+                        canAddAnimal = false;
+                    }
+                }
+                if (canAddAnimal)
+                {
+                    animals.Add(animal);
+                }
+            }
         }
 
         public bool ContainsAnimalOfSizeAndDiet(List<Animal> animals, AnimalSize size, DietType diet)
