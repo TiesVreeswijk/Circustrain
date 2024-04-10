@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
             }
             Dealer dealer = new Dealer();
             dealer.DistributeAnimals(animals);
-            int wagonCount = dealer.wagons.Count;
+            int wagonCount = dealer.Wagons.Count;
             MessageBox.Show($"There are {wagonCount} wagons");
         }
     }

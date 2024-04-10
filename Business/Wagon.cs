@@ -10,29 +10,23 @@ namespace WindowsFormsApp1
     public class Wagon
     {
         public List<Animal> animals = new List<Animal>();
+
         private int GetAnimalPoints(Animal animal)
         {
-            switch (animal.Size)
-            {
-                case AnimalSize.Small:
-                    return 1;
-                case AnimalSize.Middle:
-                    return 3;
-                case AnimalSize.Large:
-                    return 5;
-                default:
-                    return 0;
-            }
+            return (int)animal.Size;
         }
-        public int GetCurrentSize()
+        
+        public int CalculateWagonSize()
         {
             int totalSize = 0;
             foreach (Animal animal in animals)
             {
                 totalSize += GetAnimalPoints(animal);
             }
+
             return totalSize;
         }
+
         public void AddAnimal(Animal animal)
         {
             animals.Add(animal);
@@ -47,6 +41,7 @@ namespace WindowsFormsApp1
                     return true;
                 }
             }
+
             return false;
         }
     }
